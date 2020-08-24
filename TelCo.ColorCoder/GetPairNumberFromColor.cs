@@ -4,11 +4,11 @@ using System.Drawing;
 
 namespace TelCo.ColorCoder
 {
-   
+
     class GetPairNumberFromColor
     {
-
-        private static int GetPairNumberFromColor(ColorPair pair)
+        
+        public static int GetPairNumberFromColor(ColorPair pair)
         {
             // Find the major color in the array and get the index
             int majorIndex = -1;
@@ -42,6 +42,9 @@ namespace TelCo.ColorCoder
             // (Note: +1 in compute is because pair number is 1 based, not zero)
             return (majorIndex * colorMapMinor.Length) + (minorIndex + 1);
         }
-     
+        /// <summary>
+        /// Test code for the class
+        /// </summary>
+        /// <param name="args"></param>
     }
 }
