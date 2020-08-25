@@ -4,7 +4,7 @@ using System.Drawing;
 
 namespace TelCo.ColorCoder
 { 
-    class GetPairNumber
+    class GetPairNumber:ColorPair
     {
         private static int GetPairNumberFromColor(ColorPair pair)
         {
@@ -18,7 +18,6 @@ namespace TelCo.ColorCoder
                     break;
                 }
             }
-
             // Find the minor color in the array and get the index
             int minorIndex = -1;
             for (int i = 0; i < colorMapMinor.Length; i++)
@@ -36,10 +35,7 @@ namespace TelCo.ColorCoder
                     string.Format("Unknown Colors: {0}", pair.ToString()));
             }
 
-            // Compute pair number and Return  
-            // (Note: +1 in compute is because pair number is 1 based, not zero)
             return (majorIndex * colorMapMinor.Length) + (minorIndex + 1);
         }
- 
     }
 }
