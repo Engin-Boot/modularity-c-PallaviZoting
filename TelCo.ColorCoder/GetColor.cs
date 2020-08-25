@@ -6,15 +6,6 @@ namespace TelCo.ColorCoder
 {
     class GetColor
     {
-        internal class ColorPair
-        {
-            internal Color majorColor;
-            internal Color minorColor;
-            public override string ToString()
-            {
-                return string.Format("MajorColor:{0}, MinorColor:{1}", majorColor.Name, minorColor.Name);
-            }
-        }
         private static ColorPair GetColorFromPairNumber(int pairNumber)
         {
             // The function supports only 1 based index. Pair numbers valid are from 1 to 25
