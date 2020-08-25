@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Drawing;
-using static TelCo.ColorCoder;
 using static TelCo.ColorCoder.MajorMinorColors;
 using static TelCo.ColorCoder.ColorPair;
 
