@@ -6,8 +6,8 @@ namespace TelCo.ColorCoder
 {
     class MajorMinorColors
     {
-        private static Color[] colorMapMajor;
-        private static Color[] colorMapMinor;
+        public static Color[] colorMapMajor;
+        public static Color[] colorMapMinor;
 
         static MajorMinorColors()
         {
