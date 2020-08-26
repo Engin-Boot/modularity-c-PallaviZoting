@@ -7,7 +7,7 @@ using static TelCo.ColorCoder.ColorManual;
 
 namespace TelCo.ColorCoder
 {
-    class testcolormanual
+    class TestColorManual
     {
         private static void Main(string[] args)
         {
