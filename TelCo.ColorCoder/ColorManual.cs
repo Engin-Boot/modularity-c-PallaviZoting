@@ -18,7 +18,7 @@ namespace TelCo.ColorCoder
             
             for(int pairNumber = 1; pairNumber <= majorcolorlength*minorcolorlength; pairNumber++)
             {
-                colorPair majorminorcolorpair = GetColor.GetColorFromPairNumber(pairNumber);
+                ColorPair majorminorcolorpair = GetColor.GetColorFromPairNumber(pairNumber);
                 Console.WriteLine("Pair Number: , Colors: \n", pairNumber, majorminorcolorpair);
                 majorminorcolorwithpairnumber += "Pair Number : " + pairNumber +  "   Colors : " + majorminorcolorpair + "\n"; 
             }
