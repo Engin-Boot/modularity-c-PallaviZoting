@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Drawing;
 using static TelCo.ColorCoder.GetColor;
 using static TelCo.ColorCoder.GetPairNumber;
+using static TelCo.ColorCoder.ColorManual;
 
 namespace TelCo.ColorCoder
 {
@@ -10,6 +11,9 @@ namespace TelCo.ColorCoder
     {
         private static void Main(string[] args)
         {
+            ColorManual testcolormanual=new ColorManual();
+            Console.WriteLine(testcolormanual.ToString());
+            
             int pairNumber = 4;
             ColorPair testPair1 = GetColor.GetColorFromPairNumber(pairNumber);
             Console.WriteLine("[In]Pair Number: {0},[Out] Colors: {1}\n", pairNumber, testPair1);
