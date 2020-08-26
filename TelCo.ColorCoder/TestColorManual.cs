@@ -11,6 +11,7 @@ namespace TelCo.ColorCoder
     {
         private static void Main(string[] args)
         {
+            ColorManual testcolormanual=new ColorManual();
             testcolormanual = ColorManual.ToString();
             Console.WriteLine(testcolormanual);
         }
