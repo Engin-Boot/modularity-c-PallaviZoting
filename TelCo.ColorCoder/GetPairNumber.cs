@@ -9,13 +9,12 @@ namespace TelCo.ColorCoder
     {
         //seperate class for major index, minor index and to get pair number
             // Find the major color in the array and get the index
-            public static int MajorIndexGet(ColorPair Pair)
+            public static int MajorIndexGet(ColorPair pair)
             {
             int majorIndex = -1;
             for (int i = 0; i < colorMapMajor.Length; i++)
             {
-                index3 = colorMapMajor[i] == pair.majorColor;
-                if (index3)
+                if (colorMapMajor[i] == pair.majorColor)
                 {
                     majorIndex = i;
                     break;
@@ -24,7 +23,7 @@ namespace TelCo.ColorCoder
             }
        
             // Find the minor color in the array and get the index
-            public static int MinorIndexGet(ColorPair Pair)
+            public static int MinorIndexGet(ColorPair pair)
             {
             int minorIndex = -1;
             for (int i = 0; i < colorMapMinor.Length; i++)
