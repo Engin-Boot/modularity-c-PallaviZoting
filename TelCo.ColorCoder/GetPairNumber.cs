@@ -13,7 +13,8 @@ namespace TelCo.ColorCoder
             int majorIndex = -1;
             for (int i = 0; i < colorMapMajor.Length; i++)
             {
-                if (colorMapMajor[i] == pair.majorColor)
+                index3 = colorMapMajor[i] == pair.majorColor;
+                if (index3)
                 {
                     majorIndex = i;
                     break;
@@ -23,15 +24,16 @@ namespace TelCo.ColorCoder
             int minorIndex = -1;
             for (int i = 0; i < colorMapMinor.Length; i++)
             {
-                if (colorMapMinor[i] == pair.minorColor)
+                index2 = colorMapMinor[i] == pair.minorColor;
+                if (index2)
                 {
                     minorIndex = i;
                     break;
                 }
             }
             // If colors can not be found throw an exception
-            Index = majorIndex == -1 || minorIndex == -1;
-            if (Index)
+            index1 = majorIndex == -1 || minorIndex == -1
+            if (index1)
             {
                 throw new ArgumentException(
                     string.Format("Unknown Colors: {0}", pair.ToString()));
