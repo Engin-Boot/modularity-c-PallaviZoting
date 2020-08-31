@@ -7,9 +7,10 @@ namespace TelCo.ColorCoder
 { 
     class GetPairNumber
     {
-        public static int GetPairNumberFromColor(ColorPair pair)
-        {
+        //seperate class for major index, minor index and to get pair number
             // Find the major color in the array and get the index
+            public static int MajorIndexGet(ColorPair Pair)
+            {
             int majorIndex = -1;
             for (int i = 0; i < colorMapMajor.Length; i++)
             {
@@ -20,20 +21,27 @@ namespace TelCo.ColorCoder
                     break;
                 }
             }
+            }
+       
             // Find the minor color in the array and get the index
+            public static int MinorIndexGet(ColorPair Pair)
+            {
             int minorIndex = -1;
             for (int i = 0; i < colorMapMinor.Length; i++)
             {
-                index2 = colorMapMinor[i] == pair.minorColor;
-                if (index2)
+                if (colorMapMinor[i] == pair.minorColor)
                 {
                     minorIndex = i;
                     break;
                 }
             }
+            }
+        public static int GetPairNumberFromColor(ColorPair pair)
+        {
+            int majorIndex= MajorIndexGet(pair);
+            int minorIndex= MinorIndexGet(pair);
             // If colors can not be found throw an exception
-            index1 = majorIndex == -1 || minorIndex == -1
-            if (index1)
+            if (majorIndex == -1 || minorIndex == -1)
             {
                 throw new ArgumentException(
                     string.Format("Unknown Colors: {0}", pair.ToString()));
