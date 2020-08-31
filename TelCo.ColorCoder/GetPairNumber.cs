@@ -20,6 +20,7 @@ namespace TelCo.ColorCoder
                     break;
                 }
             }
+                return majorIndex;
             }
        
             // Find the minor color in the array and get the index
@@ -34,7 +35,9 @@ namespace TelCo.ColorCoder
                     break;
                 }
             }
+                return minorIndex;
             }
+        
         public static int GetPairNumberFromColor(ColorPair pair)
         {
             int majorIndex= MajorIndexGet(pair);
